@@ -55,3 +55,12 @@ Contact >> fullname [
 Contact >> fullname: aString [
   fullname := aString
 ]
+
+{ #category : #printing }
+Contact >> printOn: aStream [
+	aStream
+		nextPutAll: self fullname;
+		nextPutAll: ' <';
+		nextPutAll: self email;
+		nextPutAll: '>'
+]
